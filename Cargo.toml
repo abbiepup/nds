@@ -1,0 +1,14 @@
+[workspace]
+resolver = "3"
+members = ["nds_capi", "nds_crt", "nds_hal"]
+
+[workspace.package]
+edition = "2024"
+license = "MIT OR Apache-2.0"
+authors = ["Abbie <abbiepup@proton.me>"]
+repository = "https://github.com/abbiepup/nds"
+
+[profile.release]
+codegen-units = 1
+panic = "abort"
+lto = true
