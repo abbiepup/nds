@@ -1,0 +1,11 @@
+{
+    "rust-analyzer.cargo.allTargets": false,
+    "json.schemas": [
+        {
+            "fileMatch": [
+                ".cargo/target/*"
+            ],
+            "url": "https://gist.githubusercontent.com/abbiepup/346039c06c4a723b1226177c893fd431/raw/732dd0f3eed687a6fb6b827ee02d41a5a57de5f2/rustc_target.json"
+        }
+    ]
+}

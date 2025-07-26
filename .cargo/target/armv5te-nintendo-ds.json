@@ -1,0 +1,52 @@
+{
+    "$schema": "https://gist.githubusercontent.com/abbiepup/346039c06c4a723b1226177c893fd431/raw/c4381f7e2ae995644e3a9ac0057564c6639cd881/rustc_target.json",
+    "abi": "eabi",
+    "arch": "arm",
+    "cpu": "arm946e-s",
+    "env": "ndslibc",
+    "exe-suffix": ".elf",
+    "crt-objects-fallback": false,
+    "data-layout": "e-m:e-p:32:32-Fi8-i64:64-v128:64:128-a:0:32-n32-S64",
+    "c-enum-min-bits": 8,
+    "emit-debug-gdb-scripts": false,
+    "features": "+soft-float,+strict-align",
+    "has-thumb-interworking": true,
+    "linker": "arm-none-eabi-gcc",
+    "linker-flavor": "gnu-cc",
+    "llvm-floatabi": "soft",
+    "llvm-target": "armv5te-none-eabi",
+    "atomic-cas": false,
+    "main-needs-argc-argv": true,
+    "no-default-libraries": false,
+    "relocation-model": "static",
+    "target-pointer-width": "32",
+    "target-c-int-width": "32",
+    "vendor": "nintendo",
+    "target-family": [
+        "unix"
+    ],
+    "metadata": {
+        "description": "ARMv5TE Nintendo DS",
+        "host_tools": false,
+        "std": false,
+        "tier": 3
+    },
+    "asm-args": [
+        "-mthumb-interwork",
+        "-march=armv5te",
+        "-mlittle-endian"
+    ],
+    "pre-link-args": {
+        "gnu-cc": [
+            "-nostartfiles",
+            "-mtune=arm946e-s",
+            "-mfloat-abi=soft"
+            
+        ],
+        "gnu-lld": [
+            "-nostartfiles",
+            "-mtune=arm946e-s",
+            "-mfloat-abi=soft"
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "abi": "eabi",
+    "arch": "arm",
+    "cpu": "arm7tdmi",
+    "llvm-target": "armv4t-none-eabi",
+    "features": "+soft-float,+strict-align",
+    "has-thumb-interworking": true,
+    "target-pointer-width": "32",
+    "data-layout": "",
+    "asm-args": [
+        "-mthumb-interwork",
+        "-march=armv4t",
+        "-mlittle-endian"
+    ]
+}

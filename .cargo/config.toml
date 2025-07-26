@@ -1,0 +1,9 @@
+[build]
+target = [
+    ".cargo/target/armv5te-nintendo-ds.json",
+    ".cargo/target/armv5te-nintendo-dsi.json",
+]
+
+[unstable]
+build-std = ["core", "alloc", "compiler_builtins"]
+build-std-features = ["compiler-builtins-mem"]
