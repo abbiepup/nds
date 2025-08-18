@@ -12,4 +12,4 @@ crate-type = ["rlib", "staticlib"]
 nds_hal = { path = "../nds_hal" }
 
 [build-dependencies]
-anyhow = "1.0.98"
+anyhow = "1.0.99"
