@@ -20,7 +20,7 @@ enum Mode {
 #[optimize(speed)]
 #[unsafe(no_mangle)]
 #[instruction_set(arm::a32)]
-pub extern "aapcs" fn __aeabi_idiv(num: c_int, den: c_int) -> c_int {
+extern "aapcs" fn __aeabi_idiv(num: c_int, den: c_int) -> c_int {
     unsafe { DIV_CNT.write_volatile(Mode::D32N32 as u32) };
 
     unsafe { (DIV_NUM as *mut i32).write_volatile(num) };
@@ -38,7 +38,7 @@ pub extern "aapcs" fn __aeabi_idiv(num: c_int, den: c_int) -> c_int {
 #[optimize(speed)]
 #[unsafe(no_mangle)]
 #[instruction_set(arm::a32)]
-pub extern "aapcs" fn __aeabi_idivmod(num: c_int, den: c_int) -> [c_int; 2] {
+extern "aapcs" fn __aeabi_idivmod(num: c_int, den: c_int) -> [c_int; 2] {
     unsafe { DIV_CNT.write_volatile(Mode::D32N32 as u32) };
 
     unsafe { (DIV_NUM as *mut i32).write_volatile(num) };
@@ -59,7 +59,7 @@ pub extern "aapcs" fn __aeabi_idivmod(num: c_int, den: c_int) -> [c_int; 2] {
 #[optimize(speed)]
 #[unsafe(no_mangle)]
 #[instruction_set(arm::a32)]
-pub extern "aapcs" fn __aeabi_ldivmod(
+extern "aapcs" fn __aeabi_ldivmod(
     num: c_longlong,
     den: c_longlong,
 ) -> [c_longlong; 2] {
